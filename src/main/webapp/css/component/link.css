@@ -1,13 +1,66 @@
 
-.btn-link,
-.link-if {
-    text-decoration: none;
-    color: #fff;
+a[href$="/register"] {
+    background-image: linear-gradient(
+            to right,
+            #000080,
+            #600e77 50%,
+            purple,
+            #fff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
 }
 
-.btn-link:hover,
-.nav-link:hover,
-.link-if:hover {
-    color: var(--bs-primary);
+a[href$="/register"]:before{
+    content: '';
+    background: #000080;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
 }
 
+a[href$="/register"]:hover {
+    background-image: linear-gradient(
+            to right,
+            #070352,
+            #660c7f,
+            #4b3995,
+            #1c3e78,
+            #0d7a91
+    );
+    -webkit-text-stroke: 1px black;
+    background-position: 0;
+    -webkit-text-fill-color: transparent;
+    animation: move 45s linear infinite;
+}
+
+a[href$="/register"]:hover::before{
+    width: 100%;
+}
+
+/* Presentational Styles */
+body {
+    display: grid;
+    font-family: "Press Start 2P", serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+}
+
+@keyframes move {
+    to {
+        background-position: 4500vh;
+    }
+}

@@ -1,0 +1,66 @@
+.form-heading {
+    color: #fff ;
+    transition: 3s;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #630f7b,
+            0 0 82px #630f7b,
+            0 0 92px #630f7b,
+            0 0 102px #0e0e76,
+            0 0 151px #0e0e76;
+}
+.form-signin-heading {
+    color: #fff;
+    transition: 3s;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #630f7b,
+            0 0 82px #630f7b,
+            0 0 92px #630f7b,
+            0 0 102px #0e0e76,
+            0 0 151px #0e0e76;
+}
+
+.form-heading:hover {
+    color: #fff ;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #fff,
+            0 0 82px #fff,
+            0 0 92px #fff,
+            0 0 102px #630f7b,
+            0 0 151px #630f7b,
+            0 0 180px #630f7b,
+            0 0 205px #0e0e76,
+            0 0 230px #0e0e76,
+            0 0 255px #0e0e76;
+
+
+
+}
+
+.form-signin-heading:hover {
+    color: #fff ;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #fff,
+            0 0 82px #fff,
+            0 0 92px #fff,
+            0 0 102px #630f7b,
+            0 0 151px #630f7b,
+            0 0 180px #630f7b,
+            0 0 205px #0e0e76,
+            0 0 230px #0e0e76,
+            0 0 255px #0e0e76;
+    transition-duration: 2s, 2s;
+    transition-timing-function: linear;
+
+}

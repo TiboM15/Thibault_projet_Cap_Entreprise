@@ -6,7 +6,6 @@ public interface SluggerInterface {
 
     void setSlug(String slug);
 
-    @JsonIgnore
     String getField();
 
 }
