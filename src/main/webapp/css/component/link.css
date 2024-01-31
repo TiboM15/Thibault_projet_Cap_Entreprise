@@ -1,5 +1,5 @@
 
-a[href$="/register"] {
+.btn-link-gradient {
     background-image: linear-gradient(
             to right,
             #000080,
@@ -18,7 +18,7 @@ a[href$="/register"] {
     transition: all 0.3s ease-in-out;
 }
 
-a[href$="/register"]:before{
+.btn-link-gradient:before{
     content: '';
     background: #000080;
     display: block;
@@ -30,7 +30,7 @@ a[href$="/register"]:before{
     transition: all 0.3s ease-in-out;
 }
 
-a[href$="/register"]:hover {
+.btn-link-gradient:hover {
     background-image: linear-gradient(
             to right,
             #070352,
@@ -45,7 +45,7 @@ a[href$="/register"]:hover {
     animation: move 45s linear infinite;
 }
 
-a[href$="/register"]:hover::before{
+.btn-link-gradient:hover::before{
     width: 100%;
 }
 
@@ -63,4 +63,8 @@ body {
     to {
         background-position: 4500vh;
     }
+}
+
+.btn-link {
+    color: #fff;
 }

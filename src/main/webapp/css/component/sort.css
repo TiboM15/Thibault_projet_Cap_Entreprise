@@ -1,3 +1,13 @@
+
+.sort-filter {
+    font-size: 1.1em;
+}
+
+.sort-filter i {
+    font-size: 1.3em;
+}
+
+
 .sort-filter a {
     text-decoration: none;
     color: #FFF;

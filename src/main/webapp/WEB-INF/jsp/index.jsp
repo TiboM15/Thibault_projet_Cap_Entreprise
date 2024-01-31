@@ -6,14 +6,15 @@
 <div class="container mt-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="${contextPath}/">Accueil</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Les jeux</li>
+            <li class="breadcrumb-item active" aria-current="page">Accueil</li>
+            <li class="breadcrumb-item"><a class="btn-link btn-link-gradient" href="${contextPath}${UrlRoute.URL_GAME}">Les jeux</a></li>
+            <li class="breadcrumb-item"><a class="btn-link btn-link-gradient" href="${contextPath}${UrlRoute.URL_REVIEW}">Avis</a></li>
         </ol>
     </nav>
 
-    <h1>Les jeux</h1>
+    <h1 class="mt-4">Les jeux</h1>
 
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between w-100">
         <div class="d-flex">
             <!-- Label à afficher -->
             <c:set var="label" scope="request" value="Date"/>
@@ -39,7 +40,7 @@
         <c:set var="page" scope="request" value="${pageGames}"/>
         <%@ include file="component/pagination-number.jsp" %>
     </div>
-    <div class="row mt-3">
+    <div class="row mb-5">
         <c:forEach items="${pageGames.content}" var="game">
             <%@ include file="component/entity/game-card.jsp" %>
         </c:forEach>

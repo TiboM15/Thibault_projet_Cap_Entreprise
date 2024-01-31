@@ -1,13 +1,12 @@
 
 * {
     font-family: "Press Start 2P", serif;
+    font-size: 0.9em;
     --bs-body-bg: #272727;
     --bs-body-color: #fff;
     --bs-secondary: #323232;
     --bs-primary: #000080;
 }
-
-
 
 .btn-primary {
     width: 220px;
@@ -79,4 +78,8 @@ h2 {
     font-size: small;
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
     1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.alert {
+    font-size: 0.55em;
 }

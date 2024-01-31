@@ -151,7 +151,7 @@ public class InitDataLoaderConfig implements CommandLineRunner {
     private void createReview() {
         Faker faker = new Faker(Locale.of("fr"));
         for (long i = 1; i <= 500; i++) {
-            if (reviewRepository.existsById(i)) {
+            if (!reviewRepository.existsById(i)) {
                 Review review = new Review();
                 review.setId(i);
                 Random rand = new Random();

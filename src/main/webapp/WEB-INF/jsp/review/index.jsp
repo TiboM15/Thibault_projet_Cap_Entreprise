@@ -4,7 +4,8 @@
 <jsp:include flush="true" page="${contextPath}/WEB-INF/jsp/base.jsp"/>
 
 <div class="container">
-    <div class="d-flex justify-content-between">
+    <h1 class="my-4">Les avis</h1>
+    <div class="d-flex justify-content-between w-100">
         <!-- Label à afficher -->
         <div class="d-flex"
             <c:set var="label" scope="request" value="Date"/>
@@ -32,30 +33,7 @@
     <div class="row">
         <c:forEach items="${pageReviews.content}" var="review">
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-                <div class="main-review-card w-100">
-                    <p class="text-center">
-                        Le ${dateUtils.getDateFormat(review.createdAt, "dd/MM/yyyy")}
-                        par <a class="btn-link" href="#">${review.gamer.nickname}</a>
-                    </p>
-<%--                    <div class="review-card w-100">--%>
-<%--                        <p class="review-description">--%>
-<%--                                ${jspUtils.excerpt(review.description, 209)}--%>
-<%--                        </p>--%>
-<%--                        <div class="mt-auto">--%>
-<%--                            <div class="d-flex justify-content-end">--%>
-<%--                                <a class="btn-link" href="#">--%>
-<%--                                        ${review.game.name}--%>
-<%--                                </a>--%>
-<%--                            </div>--%>
-<%--                            <div>--%>
-<%--                                <p class= "${jspUtils.getCssClas(review.rating)}">--%>
-<%--                                        ${jspUtils.getStringRating(review.rating)} / 20--%>
-<%--                                </p>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-                    <%@ include file="../component/entity/review-card.jsp" %>
-                </div>
+                <%@ include file="../component/entity/review-card.jsp" %>
             </div>
         </c:forEach>
     </div>

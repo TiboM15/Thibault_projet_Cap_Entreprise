@@ -1,6 +1,6 @@
 
 .main-game-card {
-    font-size: smaller;
+    font-size: 0.95em;
     text-decoration: none;
     color: #fff;
     transition: all 1s ease-out;
@@ -13,12 +13,12 @@
 
 .game-card {
     width: 100%;
-    height: 180px;
+    height: 220px;
 }
 
 .game-card-img {
     width: 100%;
-    height: 88%;
+    height: 80%;
 }
 
 .game-card-img img {
@@ -27,7 +27,6 @@
     object-fit: cover;
     border-radius: 0.5em;
 }
-
 
 /*change the number below to scale to the appropriate size*/
 .game-card:hover {
@@ -42,6 +41,4 @@
     z-index: 998;
     width: 50%;
     margin-left: 10px;
-
-
 }

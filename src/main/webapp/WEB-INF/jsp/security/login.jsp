@@ -3,10 +3,10 @@
 <c:set var="title" scope="request" value="Se connecter"/>
 <jsp:include flush="true" page="../base.jsp"/>
 
-<div class="container mt-5" style="max-width:600px">
+<div class="col-lg-4 col-md mx-auto">
   <form method="POST" action="${UrlRoute.URL_LOGIN}" class="form-signin">
     <h2 class="form-heading text-center mb-4">
-      Log in
+      Se connecter
     </h2>
     <div class="form-group ${error != null ? 'has-error' : ''}">
       <span>${message}</span>
@@ -15,10 +15,10 @@
       <input name="password" type="password" class="form-control w-100 opacity-75" placeholder="Password"/>
       <p class="invalid-feedback" >${error}</p>
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-      <button class="btn btn-lg btn-primary btn-block"  type="submit">Log In</button>
+      <button class="btn btn-primary"  type="submit">Se connecter</button>
       <h4 class="text-center">
-        <a href="${contextPath}/register" class="btn-link mt-5" alt="create link">
-          Create an account
+        <a href="${contextPath}/register" class="btn-link btn-link-gradient mt-5" title="Lien création de compte">
+          Créer un compte
         </a>
       </h4>
     </div>

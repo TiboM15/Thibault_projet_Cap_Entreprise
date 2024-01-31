@@ -34,7 +34,7 @@ public class ReviewController {
             return mav;
         }
         mav.addObject("pageReviews", reviewService.findAll(pageable));
-        mav.setViewName("index");
+        mav.setViewName("review/index");
         return mav;
     }
 }

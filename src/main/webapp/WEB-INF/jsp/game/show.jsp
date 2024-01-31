@@ -61,7 +61,7 @@
         <div class="my-3 d-none"
              data-hide-show-container="formReview"
         >
-            <f:form cssClass="col-md-8 col-sm-12 mx-auto"
+            <f:form cssClass="col-md-10 col-sm-12 mx-auto"
                     action="${currentUrl}"
                     method="post"
                     modelAttribute="reviewDto"

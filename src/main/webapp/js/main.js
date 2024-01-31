@@ -12,15 +12,14 @@ function initCursorEffect() {
         }
     });
 
-    const all = document.body.getElementsByTagName("*");
-    for (let i = 0;  i < all.length; ++i) {
-        all[i].addEventListener("click", (e) => {
-            e.stopPropagation();
-        });
-    }
+    // const all = document.body.getElementsByTagName("*");
+    // for (let i = 0;  i < all.length; ++i) {
+    //     all[i].addEventListener("click", (e) => {
+    //         e.stopPropagation();
+    //     });
+    // }
 }
 
 window.addEventListener('load', () => {
-    initSortable();
     initCursorEffect();
 });
