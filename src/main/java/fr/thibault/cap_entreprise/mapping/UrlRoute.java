@@ -11,7 +11,8 @@ public class UrlRoute {
 
     public final static String URL_REVIEW = "/avis";
     public final static String URL_REVIEW_NEW = URL_REVIEW + "/nouveau";
-    public final static String URL_REVIEW_MODERATE = URL_REVIEW + "/{id}/{moderate}";
+    public final static String URL_REVIEW_MODERATE = URL_REVIEW + "/moderate";
+    public final static String URL_REVIEW_MODERATE_PATH = URL_REVIEW_MODERATE + "/{id}/{moderate}";
     public final static String URL_REVIEW_ID = URL_REVIEW + "/avis/{id}";
 
     public final static String URL_GAME = "/jeu";

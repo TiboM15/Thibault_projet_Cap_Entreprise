@@ -33,13 +33,15 @@
         <p class="review-description">
             ${jspUtils.excerpt(review.description, 209)}
         </p>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between w-100">
             <p class="${jspUtils.getCssClas(review.rating)}">
                 ${jspUtils.getStringRating(review.rating)} / 20
             </p>
-            <a class="btn-link" href="${UrlRoute.URL_GAME}/${review.game.slug}">
-                ${review.game.name}
-            </a>
+            <c:if test="${!game.name.equals(review.game.name)}">
+                <a class="btn-link" href="${UrlRoute.URL_GAME}/${review.game.slug}">
+                        ${review.game.name}
+                </a>
+            </c:if>
         </div>
     </div>
 </div>
