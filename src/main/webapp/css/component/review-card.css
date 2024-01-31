@@ -5,18 +5,22 @@
     text-decoration: none;
     padding: 0.2em 0.8em;
     color: #fff;
+    opacity: 0.75;
+    background: black;
+    height: 240px;
+
+    @media (max-width: 820px) {
+        height: 280px;
+    }
 }
 
-#review-card-char{
-    font-family: Arial, sans-serif;
-}
 .review-card {
     width: 100%;
-    height: 210px;
 }
 
 .review-card .review-description {
     text-justify: auto;
+    font-family: Arial, sans-serif;
 }
 
 

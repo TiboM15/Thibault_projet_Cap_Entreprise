@@ -18,17 +18,24 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth ->
                         auth
+                                .requestMatchers("/").authenticated()
                                 .requestMatchers(UrlRoute.URL_GAME + "/**").authenticated()
-                                .requestMatchers(UrlRoute.URL_REVIEW + "/**").authenticated()
+                                .requestMatchers(UrlRoute.URL_USER + "/**").authenticated()
+                                .requestMatchers(UrlRoute.URL_REVIEW + "/**").hasRole("MODERATOR")
+                                .requestMatchers(HttpMethod.POST, UrlRoute.URL_GAME + "/**").hasRole("MODERATOR")
                                 .requestMatchers("/**").permitAll()
                 )
                 .formLogin(formLogin ->
                         formLogin
-                                .loginPage("/login")
+                                .loginPage(UrlRoute.URL_LOGIN)
+                                .defaultSuccessUrl("/", true)
                                 .permitAll()
                 )
-                .logout(LogoutConfigurer::permitAll);
-
+                .logout(logout ->
+                        logout
+                                .logoutSuccessUrl("/login")
+                                .permitAll()
+                );
 
         return http.build();
     }

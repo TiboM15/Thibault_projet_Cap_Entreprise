@@ -57,9 +57,9 @@
             0 0 102px #630f7b,
             0 0 151px #630f7b,
             0 0 180px #630f7b,
-            0 0 205px #0e0e76,
-            0 0 230px #0e0e76,
-            0 0 255px #0e0e76;
+            0 0 205px steelblue,
+            0 0 230px steelblue,
+            0 0 255px steelblue;
     transition-duration: 2s, 2s;
     transition-timing-function: linear;
 

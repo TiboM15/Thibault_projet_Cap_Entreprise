@@ -17,6 +17,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,9 +41,8 @@ public class UserService implements
     }
 
     public User findByNickname(String nickname) {
-        Optional<User> optionalUser = userRepository.findByNickname(nickname);
-        optionalUser.orElseThrow(() -> new NotFoundException("User", "nickname", nickname));
-        return optionalUser.get();
+        return userRepository.findByNickname(nickname)
+                .orElseThrow(() -> new NotFoundException("User", "nickname", nickname));
     }
 
     @Override
@@ -61,8 +63,11 @@ public class UserService implements
         return List.of(new SimpleGrantedAuthority("ROLE_GAMER"));
     }
 
-    public User create(UserPostDTO userDTO) {
-        User user = new Gamer();
+    public Gamer create(UserPostDTO userDTO) {
+        Gamer user = new Gamer();
+        System.out.println(userDTO.getBirthedAt());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        user.setBirthAt(LocalDate.parse(userDTO.getBirthedAt(), formatter));
         user.setNickname(userDTO.getNickname());
         user.setEmail(userDTO.getEmail().toLowerCase());
         user.setPassword(passwordEncoder.encode(userDTO.getPassword()));

@@ -3,9 +3,11 @@
     font-size: smaller;
     text-decoration: none;
     color: #fff;
+    transition: all 1s ease-out;
 }
 
 .main-game-card:hover {
+    transition: all 2s ease-in;
     color: #000080;
 }
 
@@ -29,7 +31,7 @@
 
 /*change the number below to scale to the appropriate size*/
 .game-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .justify-content-between {

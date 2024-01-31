@@ -1,0 +1,89 @@
+.main-container {
+    background: linear-gradient(10deg, #000080, transparent) black;
+    border-radius: 3em;
+}
+
+.main-container .search-response-container {
+    position: relative;
+}
+
+.main-container input {
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-container a:hover {
+    color: #323232;
+}
+
+.main-container input:focus,
+.main-container input:active {
+    background: linear-gradient(10deg, #000080, transparent) black;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.main-container input::placeholder {
+    color: #fff;
+}
+
+.logged-user{
+    font-size: medium;
+}
+
+.navbar-dark{
+    background: linear-gradient(
+            10deg,
+            #070352,
+            #660c7f,
+            #4b3995,
+            #1c3e78,
+            #0d7a91,
+            transparent) black;
+    border-radius: 1em;
+    opacity: 85%;
+}
+
+a[Avis]{
+    background-image: linear-gradient(
+            to right,
+            #000080,
+            #600e77 50%,
+            purple,
+            #fff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+
+a[Avis]:hover{
+    background-image: linear-gradient(
+            to right,
+            #070352,
+            #660c7f,
+            #4b3995,
+            #1c3e78,
+            #0d7a91
+    );
+    -webkit-text-stroke: 1px black;
+    background-position: 0;
+    -webkit-text-fill-color: transparent;
+    animation: move 145s linear infinite;
+}
+

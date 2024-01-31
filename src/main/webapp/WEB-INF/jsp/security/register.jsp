@@ -22,7 +22,7 @@
         <f:errors path="password" cssClass="invalid-feedback"/>
       </div>
     <div class="form-group mt-2 ${status.error ? 'has-error' : ''} opacity-75">
-      <f:input type="birthedAt" path="birthedAt" class="form-control" placeholder="Birh Date (dd/MM/yyyy)"/>
+      <f:input type="date" path="birthedAt" class="form-control" placeholder="Birh Date (dd/MM/yyyy)"/>
       <f:errors path="birthedAt" cssClass="invalid-feedback"/>
     </div>
       <button class="btn btn-lg btn-primary btn-block mt-2" type="submit">Submit</button>

@@ -6,6 +6,8 @@ import fr.thibault.cap_entreprise.repository.GameRepository;
 import fr.thibault.cap_entreprise.service.interfaces.DAOFindByIdInterface;
 import lombok.AllArgsConstructor;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +23,10 @@ public class GameService implements DAOFindByIdInterface<Game> {
     public Game findById(Long id) {
         return gameRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
+    }
+
+    public Page<Game> findAll(Pageable pageable) {
+        return gameRepository.findAll(pageable);
     }
 
     public Game findBySlug(String slug) {

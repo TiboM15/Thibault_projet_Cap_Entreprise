@@ -3,6 +3,7 @@ package fr.thibault.cap_entreprise.DTO;
 import fr.thibault.cap_entreprise.validator.annotation.UniqueEmail;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,7 +34,6 @@ public class UserPostDTO {
     @Size(message = "The password must have at least 8 characters", min = 8)
     private String password;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @NotBlank(message = "Please, enter a valid Date (dd/MM/yyyy")
-    private LocalDateTime birthedAt;
+    private String birthedAt;
 }
