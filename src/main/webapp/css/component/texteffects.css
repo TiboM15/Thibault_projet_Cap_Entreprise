@@ -64,3 +64,8 @@
     transition-timing-function: linear;
 
 }
+
+.modeattente{
+    font-size: 1.1em;
+    color: lightcoral;
+}

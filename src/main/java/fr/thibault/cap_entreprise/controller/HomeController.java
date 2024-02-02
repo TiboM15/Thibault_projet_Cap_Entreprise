@@ -37,9 +37,10 @@ public class HomeController {
 
     private ExcelReviewService excelService;
 
-    @GetMapping("/")
+    @GetMapping(UrlRoute.URL_HOME)
     public ModelAndView index(
             ModelAndView mav,
+            @ModelAttribute("messageModerate") String messageModerate,
             @PageableDefault(
                     size = 6, // nb Element par page
                     sort = { "publishedAt" }, // order by
@@ -47,6 +48,7 @@ public class HomeController {
             ) Pageable pageable
     ) {
         mav.setViewName("index");
+        mav.addObject("messageModerate", messageModerate);
         mav.addObject("pageGames", gameService.findAll(pageable));
         return mav;
     }

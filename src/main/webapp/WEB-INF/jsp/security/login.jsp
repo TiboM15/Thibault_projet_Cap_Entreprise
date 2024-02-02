@@ -15,9 +15,9 @@
       <input name="password" type="password" class="form-control w-100 opacity-75" placeholder="Password"/>
       <p class="invalid-feedback" >${error}</p>
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-      <button class="btn btn-primary"  type="submit">Se connecter</button>
+      <button class="btn btn-primary mb-5"  type="submit">Se connecter</button>
       <h4 class="text-center">
-        <a href="${contextPath}/register" class="btn-link btn-link-gradient mt-5" title="Lien création de compte">
+        <a href="${contextPath}/s-inscrire" class="btn-link btn-link-gradient mt-5" title="Lien création de compte">
           Créer un compte
         </a>
       </h4>

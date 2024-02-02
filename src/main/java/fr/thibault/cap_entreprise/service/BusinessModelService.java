@@ -28,4 +28,10 @@ public class BusinessModelService implements
                 .orElseThrow(EntityNotFoundException::new);
     }
 
+    @Override
+    public List<BusinessModel> findAllSorted() {
+        return businessModelRepository.findAllByOrderByNameAsc();
+    }
+
+
 }

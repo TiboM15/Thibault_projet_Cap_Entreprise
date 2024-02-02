@@ -3,7 +3,19 @@
 <c:set var="title" scope="request" value="Avis"/>
 <jsp:include flush="true" page="${contextPath}/WEB-INF/jsp/base.jsp"/>
 
-<div class="container">
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="btn-link btn-link-gradient" href="${contextPath}${UrlRoute.URL_HOME}">Accueil</a></li>
+            <li class="breadcrumb-item"><a class="btn-link btn-link-gradient" href="${contextPath}${UrlRoute.URL_GAME}">Les jeux</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Avis</li>
+        </ol>
+    </nav>
+    <c:if test="${messageModerate.equals('')}">
+        <div class="alert alert-success">
+                ${messageModerate}
+        </div>
+    </c:if>
     <h1 class="my-4">Les avis</h1>
     <div class="d-flex justify-content-between w-100">
         <!-- Label à afficher -->
@@ -24,6 +36,26 @@
             <c:set var="label" scope="request" value="Joueur"/>
             <c:set var="sortable" value="gamer.nickname"/>
             <%@ include file="../component/sortable.jsp" %>
+
+        <security:authorize access="hasRole('MODERATOR')">
+            <div class="sort-filter mt-4 me-3">
+                <select class="form-select sortable-select">
+                    <option value="all" data-filter-url="${currentUrl}">
+                        Tous les commentaires
+                    </option>
+                    <option value="sort=moderator,desc"
+                            data-filter-url="${jspUtils.generateUrlFrom(currentUrl, currentQuery, "sort=moderator,desc")}"
+                    >
+                        Modérés
+                    </option>
+                    <option value="sort=moderator,asc"
+                            data-filter-url="${jspUtils.generateUrlFrom(currentUrl, currentQuery, "sort=moderator,asc")}"
+                    >
+                        À modérer
+                    </option>
+                </select>
+            </div>
+        </security:authorize>
 
             <%@ include file="../component/filter-reset.jsp" %>
         </div>

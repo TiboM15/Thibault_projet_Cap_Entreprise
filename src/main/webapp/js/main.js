@@ -23,3 +23,20 @@ function initCursorEffect() {
 window.addEventListener('load', () => {
     initCursorEffect();
 });
+
+function pray() {
+    const sortableItems = document.getElementsByTagName('a');
+    const pray = document.querySelectorAll('.pray');
+    for (const sortableItem of sortableItems) {
+        if(sortableItem.matches(':hover')) {
+            console.log("test")
+            for (const pray2 of pray) {
+                pray2.classList.toggle('d-none')
+                console.log(pray2)
+            }
+        }
+    }
+}
+window.addEventListener('mouseover', () => {
+    pray();
+});

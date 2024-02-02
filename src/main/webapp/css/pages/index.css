@@ -1,5 +1,6 @@
 
 .logged-user {
-    color: #ff4020;
+    color: #630f7b;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff;
     font-size: 1.1em;
 }

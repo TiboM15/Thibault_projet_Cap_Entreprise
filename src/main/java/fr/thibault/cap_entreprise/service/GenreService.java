@@ -25,4 +25,9 @@ public class GenreService implements DAOEntityInterface<Genre> {
         return genreRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
     }
+
+    @Override
+    public List<Genre> findAllSorted() {
+        return genreRepository.findAllByOrderByNameAsc();
+    }
 }

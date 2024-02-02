@@ -18,18 +18,22 @@
         <script type="text/javascript" src="${contextPath}/js/init-sortable.js"></script>
         <script type="text/javascript" src="${contextPath}/js/hide-form.js"></script>
         <script type="text/javascript" src="${contextPath}/js/alert.js"></script>
+        <script type="text/javascript" src="${contextPath}/js/multiple-select.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    </head>
-    <body>
         <security:authorize access="isAuthenticated()">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-75">
                 <div class="row w-100">
                     <div class="col-3">
                         <a class="navbar-brand ms-3" href="${contextPath}/">
-                            <i class="fa-brands fa-steam fa-3x"></i>
+                            <i class="logo">
+                                <img src="${contextPath}/resources/image/logo/logo.png">
+                            </i>
                         </a>
+                    </div>
+                    <div class="pixelReview col-9 row justify-content-evenly position-absolute align-self-center">
+                        PixelReview
                     </div>
                     <div class="col-9">
                         <div class="d-flex justify-content-end">

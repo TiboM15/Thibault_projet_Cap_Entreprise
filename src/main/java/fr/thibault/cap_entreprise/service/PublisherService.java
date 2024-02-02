@@ -27,4 +27,9 @@ public class PublisherService implements
         return publisherRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
     }
+
+    @Override
+    public List<Publisher> findAllSorted() {
+        return publisherRepository.findAllByOrderByNameAsc();
+    }
 }

@@ -25,9 +25,15 @@ public class ClassificationService implements
         return classificationRepository.findAll();
     }
 
+
     @Override
     public Classification findById(Long id) {
         return classificationRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
+    }
+
+    @Override
+    public List<Classification> findAllSorted() {
+        return classificationRepository.findAllByOrderByNameAsc();
     }
 }

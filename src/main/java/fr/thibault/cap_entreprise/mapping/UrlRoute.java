@@ -4,6 +4,7 @@ public class UrlRoute {
 
     public final static String URL_LOGIN = "/login";
     public final static String URL_LOGOUT = "/logout";
+    public final static String URL_HOME = "/";
     public final static String URL_REGISTER = "/s-inscrire";
     public final static String URL_USER = "/gamer";
     public final static String URL_USER_SHOW = "/gamer/{uuid}";
@@ -18,5 +19,8 @@ public class UrlRoute {
     public final static String URL_GAME = "/jeu";
     public final static String URL_GAME_NEW = URL_GAME + "/nouveau";
     public final static String URL_GAME_SLUG = URL_GAME + "/{slug}";
+
+    public final static String URL_GAME_UPLOAD_IMAGE = URL_GAME + "/upload-image";
+    public final static String URL_GAME_UPLOAD_IMAGE_PATH = URL_GAME + "/upload-image/{slug}";
 }
 

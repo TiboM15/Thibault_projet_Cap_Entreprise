@@ -12,40 +12,11 @@
         </ol>
     </nav>
 
-    <h1 class="mt-4">Les jeux</h1>
-
-    <div class="d-flex justify-content-between w-100">
-        <div class="d-flex">
-            <!-- Label à afficher -->
-            <c:set var="label" scope="request" value="Date"/>
-            <!-- Sur quelle propriété de l'objet on souhaite trier -->
-            <c:set var="sortable" value="publishedAt"/>
-            <%@ include file="component/sortable.jsp" %>
-
-            <c:set var="label" scope="request" value="Name"/>
-            <c:set var="sortable" value="name"/>
-            <%@ include file="component/sortable.jsp" %>
-
-            <c:set var="label" scope="request" value="Genre"/>
-            <c:set var="sortable" value="genre.name"/>
-            <%@ include file="component/sortable.jsp" %>
-
-            <c:set var="label" scope="request" value="Editeur"/>
-            <c:set var="sortable" value="publisher.name"/>
-            <%@ include file="component/sortable.jsp" %>
-
-            <%@ include file="component/filter-reset.jsp" %>
+    <body>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://player.vimeo.com/video/277957882?h=af75e251f5&color=ffffff&title=0&byline=0&portrait=0&autoplay=1&controls=0&loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <%--        <iframe src="https://www.youtube-nocookie.com/embed/-cSFPIwMEq4?si=85Eb65tQhOgmYQf5&autoplay=1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>></iframe>--%>
         </div>
-
-        <c:set var="page" scope="request" value="${pageGames}"/>
-        <%@ include file="component/pagination-number.jsp" %>
-    </div>
-    <div class="row mb-5">
-        <c:forEach items="${pageGames.content}" var="game">
-            <%@ include file="component/entity/game-card.jsp" %>
-        </c:forEach>
-    </div>
-    <%@ include file="component/pagination.jsp" %>
-</div>
+    </body>
 
 <%@ include file="footer.jsp" %>

@@ -13,6 +13,14 @@
     </nav>
     <div class="row">
         <div class="col-md-6 col-sm-12">
+            <h1>
+                ${game.name}
+                <security:authorize access="hasRole('MODERATOR')">
+                    <a class="ms-1 link-green" href="${UrlRoute.URL_GAME_UPLOAD_IMAGE}/${game.slug}">
+                        <i class="fa-solid fa-upload"></i>
+                    </a>
+                </security:authorize>
+            </h1>
             <div class="container-img p-3">
                 <img alt="${game.name}" src="${game.image}">
             </div>
@@ -20,10 +28,10 @@
         <div class="col-md-6 col-sm-12">
             <h1>${game.name}</h1>
             <p class="m-0">Sortie le : ${dateUtils.getDateFormat(game.publishedAt, "dd/MM/yyyy")}</p>
-            <p class="m-0">Editeur : ${game.publisher.name}</p>
-            <p class="m-0">Genre : ${game.genre.name}</p>
-            <p class="m-0">Modèle économique : ${game.businessModel.name}</p>
-            <p class="m-0">Classification : ${game.classification.name}</p>
+            <p class="m-0">Editeur : <a class="link-if" href="#">${game.publisher.name}</a></p>
+            <p class="m-0">Genre : <a class="link-if" href="#">${game.genre.name}</a></p>
+            <p class="m-0">Modèle économique : <a class="link-if" href="#">${game.businessModel.name}</a></p>
+            <p class="m-0">Classification : <a class="link-if" href="#">${game.classification.name}</a></p>
 
             <c:if test="${game.platforms.size() > 0}">
                 <p class="m-0">Disponible sur :</p>

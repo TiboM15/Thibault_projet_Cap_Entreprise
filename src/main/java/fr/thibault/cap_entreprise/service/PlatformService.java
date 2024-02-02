@@ -27,4 +27,9 @@ public class PlatformService implements
         return platformRepository.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
     }
+
+    @Override
+    public List<Platform> findAllSorted() {
+        return platformRepository.findAllByOrderByNameAsc();
+    }
 }

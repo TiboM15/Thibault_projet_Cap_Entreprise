@@ -87,3 +87,22 @@ a[Avis]:hover{
     animation: move 145s linear infinite;
 }
 
+.logo img{
+    width: 75px;
+    height: 75px;
+}
+
+.pixelReview{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size:35px;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: darkgoldenrod;
+    text-shadow:
+            8px 8px navy,
+            20px 20px #000000;
+}

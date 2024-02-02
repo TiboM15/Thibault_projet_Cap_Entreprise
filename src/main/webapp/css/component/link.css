@@ -1,52 +1,32 @@
 
-.btn-link-gradient {
-    background-image: linear-gradient(
-            to right,
-            #000080,
-            #600e77 50%,
-            purple,
-            #fff 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-text-stroke: 1px black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-link-gradient:before{
-    content: '';
-    background: #000080;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+.btn-link-gradient{
+    color: darkslateblue ;
+    transition: 1s;
+    text-shadow:
+            0 0 7px darkslateblue,
+            0 0 10px darkslateblue,
+            0 0 21px #fff,
+            0 0 42px #630f7b,
+            0 0 82px #630f7b,
+            0 0 92px #630f7b,
+            0 0 102px #0e0e76,
+            0 0 151px #0e0e76;
 }
 
 .btn-link-gradient:hover {
-    background-image: linear-gradient(
-            to right,
-            #070352,
-            #660c7f,
-            #4b3995,
-            #1c3e78,
-            #0d7a91
-    );
-    -webkit-text-stroke: 1px black;
-    background-position: 0;
-    -webkit-text-fill-color: transparent;
-    animation: move 45s linear infinite;
-}
-
-.btn-link-gradient:hover::before{
-    width: 100%;
+    color: darkslateblue;
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff,
+    0 0 180px #630f7b,
+    0 0 205px #0e0e76,
+    0 0 230px #0e0e76,
+    0 0 255px #0e0e76;
 }
 
 /* Presentational Styles */
@@ -67,4 +47,16 @@ body {
 
 .btn-link {
     color: #fff;
+}
+
+.link-green {
+    color: green;
+}
+
+.link-green:hover {
+    color: limegreen;
+}
+
+.btn-link:hover.pray {
+    opacity: 100%;
 }
